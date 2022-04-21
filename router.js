@@ -1,13 +1,12 @@
 import Router from 'express';
-import PostController from "./PostController.js";
-import postController from "./PostController.js";
+import CardController from "./CardController.js";
 
 const router = new Router();
 
-router.post('/posts', PostController.create);
-router.get('/posts', postController.getAll);
-router.get('/posts/:id', postController.getById);
-router.put('/posts', postController.update);
-router.delete('/posts/:id', postController.delete);
+router.post('/cards', CardController.create);
+router.get('/cards', CardController.getAll);
+router.get('/cards/:id', CardController.getById);
+router.put('/cards', CardController.update);
+router.delete('/cards/:id', CardController.delete);
 
 export default router;
