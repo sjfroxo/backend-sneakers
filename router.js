@@ -6,6 +6,7 @@ const router = new Router();
 router.post('/cards', CardController.create);
 router.get('/cards', CardController.getAll);
 router.get('/cards/:id', CardController.getById);
+router.get('/cards/search', CardController.searchCards);
 router.put('/cards', CardController.update);
 router.delete('/cards/:id', CardController.delete);
 

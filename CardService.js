@@ -36,6 +36,13 @@ class CardService {
             const card = await Card.findByIdAndDelete(id);
             return card;
     }
+    async search(line) {
+        if (!line) {
+            throw new Error('Вы ничего не ввели.');
+        }
+        const cards = await Card.find({brand: line});
+        return cards
+    }
 }
 
 export default new CardService();

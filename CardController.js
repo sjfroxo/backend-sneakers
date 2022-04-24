@@ -41,6 +41,14 @@ class CardController {
             res.status(500).json(e);
         }
     }
+    async searchCards(req, res) {
+        try {
+            const searchCard = await CardService.search(req.body);
+            return res.json(searchCard);
+        } catch (e) {
+            res.status(500).json(e);
+        }
+    }
 }
 
 export default new CardController();
